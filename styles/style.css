@@ -226,20 +226,8 @@ html {
 }
 
 body {
-  text-align: center;
-  font-size: 1rem;
-  color: #F0EFED;
-  background-color: #011F3F;
-  font-family: 'Press Start 2P', cursive;
-}
-
-main {
-  min-height: calc(100vh - 4rem);
-}
-
-a {
-  color: #F0EFED;
-  text-decoration: none;
+  text-align: left;
+  font-size: 2rem;
 }
 
 .wrapper {
@@ -249,19 +237,36 @@ a {
   margin: 0 auto;
 }
 
-.coin-display {
-  text-align: left;
-}
-
-.coin {
-  margin-top: 10px;
-}
-
 .grid-container {
+  --row-num:1;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: repeat();
-      grid-template-rows: repeat();
+  -ms-grid-rows: (auto)[var];
+      grid-template-rows: repeat(var(--row-num), auto);
+  background: white;
+  padding: 2rem;
+}
+
+.cryptoDataRowChild {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cryptoDataRow {
+  margin: 1rem;
+}
+
+.crypto-grid-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 footer {

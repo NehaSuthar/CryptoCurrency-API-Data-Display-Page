@@ -3,30 +3,15 @@ html {
   font-size: 62.5%;
 }
 body {
-  text-align: center;
-  font-size:1rem;
-  color:#F0EFED;
-  background-color: #011F3F;
-  font-family: 'Press Start 2P', cursive;
+  text-align: left;
+  font-size:2rem;
 }
-main{
-  min-height: calc(100vh - 4rem);//adjusted as per footer height
-}
-a{
-  color:#F0EFED;
-  text-decoration: none;
-}
+
 .wrapper{
   width:90%;
   max-width:1400px;
   min-width:320px;
   margin:0 auto;
-}
-.coin-display {
-  text-align: left;
-}
-.coin {
-  margin-top: 10px;
 }
 
 ////////////---------------------///////
@@ -35,6 +20,18 @@ a{
   display:grid;
   grid-template-rows: repeat(var(--row-num),auto);  
   background:white;
+  padding:2rem;
+}
+.cryptoDataRowChild{
+  display:flex;
+  justify-content: space-between;
+}
+.cryptoDataRow{
+  margin:1rem;
+}
+.crypto-grid-header{
+  display:flex;
+  justify-content: space-between;
 }
 //------------------------------------footer----------------------------//
 footer{
