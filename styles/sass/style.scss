@@ -1,0 +1,41 @@
+@import "setup";
+html {
+  font-size: 62.5%;
+}
+body {
+  text-align: center;
+  font-size:1rem;
+  color:#F0EFED;
+  background-color: #011F3F;
+  font-family: 'Press Start 2P', cursive;
+}
+main{
+  min-height: calc(100vh - 4rem);//adjusted as per footer height
+}
+a{
+  color:#F0EFED;
+  text-decoration: none;
+}
+.wrapper{
+  width:90%;
+  max-width:1400px;
+  min-width:320px;
+  margin:0 auto;
+}
+.coin-display {
+  text-align: left;
+}
+.coin {
+  margin-top: 10px;
+}
+//------------------------------------footer----------------------------//
+footer{
+  background:#2c2c2c;
+  width:100%;
+  height: 4rem;
+  p{
+    // padding:2rem 0;
+    padding-top: 2rem; 
+    margin-top: 1rem;
+  }
+}
