@@ -257,6 +257,13 @@ a {
   margin-top: 10px;
 }
 
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: repeat();
+      grid-template-rows: repeat();
+}
+
 footer {
   background: #2c2c2c;
   width: 100%;
