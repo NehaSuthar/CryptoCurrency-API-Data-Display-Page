@@ -269,6 +269,20 @@ body {
           justify-content: space-between;
 }
 
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 2rem 3rem;
+}
+
+.previous {
+  color: black;
+}
+
+.next {
+  color: black;
+}
+
 footer {
   background: #2c2c2c;
   width: 100%;

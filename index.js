@@ -20,7 +20,7 @@ cryptoApp.getLiveCryptoData = () => {
       params: {
         CMC_PRO_API_KEY: cryptoApp.apiKey,
         start: 1,
-        limit: 50,
+        limit: 200,
         convert: 'USD',
       },
       proxyHeaders: {
@@ -31,8 +31,21 @@ cryptoApp.getLiveCryptoData = () => {
     }
   })
 }
+$('.previous').on('click',()=>{//Previous button functionality
+  if(cryptoApp.recordDisplayCounter > 0){
+    cryptoApp.recordDisplayCounter -= 10;
+    cryptoApp.renderCurrencyData(cryptoApp.currencyDataList,cryptoApp.recordDisplayCounter);
+  }
+});
+$('.next').on('click',()=>{//next button functionality
+  if(cryptoApp.recordDisplayCounter < (cryptoApp.currencyDataList.length)){
+    cryptoApp.recordDisplayCounter += 10;
+    cryptoApp.renderCurrencyData(cryptoApp.currencyDataList,cryptoApp.recordDisplayCounter);
+  }
+});
 cryptoApp.renderCurrencyData = (currencyData,start) => {
-  for(let i=start;i<= start+10;i++){
+  $('.grid-container').empty();
+  for(let i=start;i< start+10;i++){
     const cryptoName = $('<p>').text(` ${currencyData[i].name}`);
     const cryptoSymbol = $('<p>').text(`${currencyData[i].symbol}`);
     const cryptoPrice = $('<p>').text(`$${currencyData[i].quote.USD.price}`);
@@ -69,6 +82,7 @@ cryptoApp.init = ()=>{
     // console.log("API call response:", response.data);
     cryptoApp.currencyDataList = response.data;
     // make call to function that creates html elements for each cryptocurrency coin in the list
+    cryptoApp.recordDisplayCounter += 10;
     cryptoApp.renderCurrencyData(cryptoApp.currencyDataList,0);
   }).catch((err) => {
     console.log("api call error:", err.message);
