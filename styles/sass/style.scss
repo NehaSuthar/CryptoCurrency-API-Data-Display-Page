@@ -66,15 +66,29 @@ table{
   max-width: 100%; 
   border-collapse: collapse;
 }
+th { 
+  background: #333; 
+  color: white; 
+  font-weight: bold; 
+}
 th, td {
   text-align: left;
   padding: 8px;
 }
-tr:nth-child(even) {background-color: #f2f2f2;}
+tr{
+  padding:1rem 0;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
 .table{
   background: white;
   padding:2rem;
   flex-basis: 70%;
+}
+.buyButton{
+  padding:.5rem 1rem;
+  background:
 }
 .preNextNav{
   margin-top:2rem;

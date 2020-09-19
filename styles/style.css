@@ -320,9 +320,19 @@ table {
   border-collapse: collapse;
 }
 
+th {
+  background: #333;
+  color: white;
+  font-weight: bold;
+}
+
 th, td {
   text-align: left;
   padding: 8px;
+}
+
+tr {
+  padding: 1rem 0;
 }
 
 tr:nth-child(even) {
@@ -334,6 +344,10 @@ tr:nth-child(even) {
   padding: 2rem;
   -ms-flex-preferred-size: 70%;
       flex-basis: 70%;
+}
+
+.buyButton {
+  padding: 1rem;
 }
 
 .preNextNav {

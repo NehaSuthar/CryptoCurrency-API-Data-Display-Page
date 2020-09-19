@@ -51,8 +51,9 @@ cryptoApp.renderCurrencyData = (currencyData,start) => {
     const cryptoPrice = $('<td>').text(`$${currencyData[i].quote.USD.price}`);
     const cryptoVolumeChange = $('<td>').text(`$${currencyData[i].quote.USD.volume_24h}`);
     const cryptoPriceChange = $('<td>').text(`${currencyData[i].quote.USD.percent_change_24h}%`);
+    const tradeButton = $('<button>').text(`buy`).addClass('buyButton');
     const cryptoRowContainer = $('<tr>')
-    cryptoRowContainer.append(cryptoName,cryptoSymbol,cryptoPrice,cryptoVolumeChange,cryptoPriceChange);
+    cryptoRowContainer.append(cryptoName,cryptoSymbol,cryptoPrice,cryptoVolumeChange,cryptoPriceChange,tradeButton);
     $('tbody').append(cryptoRowContainer);
     //coin = $("<h2></h2>").text(`name: ${coin.name} | symbol: ${coin.symbol} | price: $${coin.quote.USD.price}`).addClass("coin");
   }
