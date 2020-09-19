@@ -44,38 +44,18 @@ $('.next').on('click',()=>{//next button functionality
   }
 });
 cryptoApp.renderCurrencyData = (currencyData,start) => {
-  $('.grid-container').empty();
+  $('tbody').empty();
   for(let i=start;i< start+10;i++){
-    const cryptoName = $('<p>').text(` ${currencyData[i].name}`);
-    const cryptoSymbol = $('<p>').text(`${currencyData[i].symbol}`);
-    const cryptoPrice = $('<p>').text(`$${currencyData[i].quote.USD.price}`);
-    const cryptoVolumeChange = $('<p>').text(`$${currencyData[i].quote.USD.volume_24h}`);
-    const cryptoPriceChange = $('<p>').text(`${currencyData[i].quote.USD.percent_change_24h}%`);
-    const cryptoFlexContainer = $('<div>').addClass("cryptoDataRowChild");///flex class
-    const cryptoContainerDiv = $('<div>').addClass("cryptoDataRow");///grid child
-    cryptoFlexContainer.append(cryptoName,cryptoSymbol,cryptoVolumeChange,cryptoPriceChange);
-    cryptoContainerDiv.append(cryptoFlexContainer);
-    $('.grid-container').append(cryptoContainerDiv);
+    const cryptoName = $('<td>').text(` ${currencyData[i].name}`);
+    const cryptoSymbol = $('<td>').text(`${currencyData[i].symbol}`);
+    const cryptoPrice = $('<td>').text(`$${currencyData[i].quote.USD.price}`);
+    const cryptoVolumeChange = $('<td>').text(`$${currencyData[i].quote.USD.volume_24h}`);
+    const cryptoPriceChange = $('<td>').text(`${currencyData[i].quote.USD.percent_change_24h}%`);
+    const cryptoRowContainer = $('<tr>')
+    cryptoRowContainer.append(cryptoName,cryptoSymbol,cryptoPrice,cryptoVolumeChange,cryptoPriceChange);
+    $('tbody').append(cryptoRowContainer);
     //coin = $("<h2></h2>").text(`name: ${coin.name} | symbol: ${coin.symbol} | price: $${coin.quote.USD.price}`).addClass("coin");
   }
-  
-  /*
-  let cryptoArraylength =currencyData.length;
-  $('.grid-container').css("--row-num",cryptoArraylength);
-  currencyData.forEach(coin => {
-    const cryptoName = $('<p>').text(` ${coin.name}`);
-    const cryptoSymbol = $('<p>').text(`${coin.symbol}`);
-    const cryptoPrice = $('<p>').text(`$${coin.quote.USD.price}`);
-    const cryptoVolumeChange = $('<p>').text(`$${coin.quote.USD.volume_24h}`);
-    const cryptoPriceChange = $('<p>').text(`${coin.quote.USD.percent_change_24h}%`);
-    const cryptoFlexContainer = $('<div>').addClass("cryptoDataRowChild");///flex class
-    const cryptoContainerDiv = $('<div>').addClass("cryptoDataRow");///grid child
-    cryptoFlexContainer.append(cryptoName,cryptoSymbol,cryptoVolumeChange,cryptoPriceChange);
-    cryptoContainerDiv.append(cryptoFlexContainer);
-    $('.grid-container').append(cryptoContainerDiv);
-    //coin = $("<h2></h2>").text(`name: ${coin.name} | symbol: ${coin.symbol} | price: $${coin.quote.USD.price}`).addClass("coin");
-    $(".coin-display").append(coin, $("<br>"));
-  });*/
 }
 cryptoApp.init = ()=>{
   cryptoApp.getLiveCryptoData().then(response => {

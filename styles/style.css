@@ -223,11 +223,18 @@ textarea {
 
 html {
   font-size: 62.5%;
+  --column-width-min:100px;
 }
 
 body {
   text-align: left;
   font-size: 2rem;
+  background: #f9f9f9;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
 
 .wrapper {
@@ -237,59 +244,131 @@ body {
   margin: 0 auto;
 }
 
-.grid-container {
-  --row-num:1;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: (auto)[var];
-      grid-template-rows: repeat(var(--row-num), auto);
+nav {
+  background: #0a0a23;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+nav a {
+  color: white;
+  font-size: 2rem;
+}
+
+.flexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.detailContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2rem auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 85vh;
+}
+
+.userInfoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: white;
+}
+
+.userInfoContainer .profileImgContainer {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+}
+
+.userInfoContainer .profileImgContainer img {
+  width: 100%;
+}
+
+.profileInfoContainer {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+}
+
+.profileInfoContainer button {
+  padding: 1rem;
+  background: grey;
+  border: none;
+  position: relative;
+  top: 50%;
+  left: 20%;
+}
+
+table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table {
   background: white;
   padding: 2rem;
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
 }
 
-.cryptoDataRowChild {
+.preNextNav {
+  margin-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.cryptoDataRow {
-  margin: 1rem;
-}
-
-.crypto-grid-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-a {
+.previous,
+.next {
+  color: white;
   text-decoration: none;
   display: inline-block;
-  padding: 2rem 3rem;
-}
-
-.previous {
-  color: black;
+  padding: 1rem 2rem;
+  background: #0a0a23;
 }
 
 .next {
-  color: black;
+  margin-left: 2rem;
 }
 
 footer {
   background: #2c2c2c;
   width: 100%;
-  height: 4rem;
+  text-align: center;
 }
 
 footer p {
-  padding-top: 2rem;
-  margin-top: 1rem;
+  padding: 1rem 0;
+  color: white;
 }
