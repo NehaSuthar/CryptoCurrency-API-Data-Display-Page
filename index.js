@@ -31,17 +31,31 @@ cryptoApp.getLiveCryptoData = () => {
     }
   })
 }
-$('.previous').on('click',()=>{//Previous button functionality
+decreasePreviousCounter = ()=>{
   if(cryptoApp.recordDisplayCounter > 0){
     cryptoApp.recordDisplayCounter -= 10;
     cryptoApp.renderCurrencyData(cryptoApp.currencyDataList,cryptoApp.recordDisplayCounter);
   }
-});
-$('.next').on('click',()=>{//next button functionality
+}
+increaseNextCounter = ()=>{
   if(cryptoApp.recordDisplayCounter < (cryptoApp.currencyDataList.length)){
     cryptoApp.recordDisplayCounter += 10;
     cryptoApp.renderCurrencyData(cryptoApp.currencyDataList,cryptoApp.recordDisplayCounter);
   }
+}
+$('.previous').on('click',()=>{//Previous button functionality
+  decreasePreviousCounter();  
+});
+$('.previous').on('keypress',(event)=>{//Previous button functionality
+  if(event.keyCode == '13')
+    decreasePreviousCounter();  
+});
+$('.next').on('click',()=>{//next button functionality
+  increaseNextCounter();
+});
+$('.next').on('keypress',(event)=>{//Previous button functionality
+  if(event.keyCode == '13')
+    decreasePreviousCounter();  
 });
 cryptoApp.renderCurrencyData = (currencyData,start) => {
   $('tbody').empty();
@@ -51,7 +65,12 @@ cryptoApp.renderCurrencyData = (currencyData,start) => {
     const cryptoPrice = $('<td>').text(`$${currencyData[i].quote.USD.price}`);
     const cryptoVolumeChange = $('<td>').text(`$${currencyData[i].quote.USD.volume_24h}`);
     const cryptoPriceChange = $('<td>').text(`${currencyData[i].quote.USD.percent_change_24h}%`);
-    const tradeButton = $('<button>').text(`buy`).addClass('buyButton');
+    if(currencyData[i].quote.USD.percent_change_24h <0){
+      cryptoPriceChange.addClass('red');
+    }else if(currencyData[i].quote.USD.percent_change_24h > 0){
+      cryptoPriceChange.addClass('green');
+    }
+    const tradeButton = $('<button>').text(`buy`).addClass('btn');
     const cryptoRowContainer = $('<tr>')
     cryptoRowContainer.append(cryptoName,cryptoSymbol,cryptoPrice,cryptoVolumeChange,cryptoPriceChange,tradeButton);
     $('tbody').append(cryptoRowContainer);
@@ -74,4 +93,20 @@ cryptoApp.init = ()=>{
 $(()=>{
   // $.ajaxSetup({'cache':true});
   cryptoApp.init();
+  $('.toggelUserForm').on('click',()=>{
+    $('.detail-form').css('display','block');
+  });
+  $('form').on('submit',(event)=>{
+    event.preventDefault();
+    const userName = $('#name').val();
+    const userEmail = $('#email').val();
+    const userBalance = $('#balance').val();
+    $('.toggelUserForm').hide();
+    const userNameF = $('<h3>').text(`Name: ${userName}`);
+    const userEmailF = $('<h3>').text(`Email: ${userEmail}`);
+    const userBalanceF = $('<h3>').text(`Balance: ${userBalance}`);
+    $('.showUserDetail').append(userNameF,userEmailF,userBalanceF);
+    $('.showUserDetail').show();
+    $('.detail-form').css('display','none');
+  });
 });

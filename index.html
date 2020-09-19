@@ -19,7 +19,21 @@
                 <img src="./images/Image.png">
               </div>
               <div class="profileInfoContainer">
-                <button>Enter User Details</button>
+                <button class="toggelUserForm">Enter User Details</button>
+                <div class= "showUserDetail">
+                </div>
+                <div class="detail-form" id="detail-form">
+                  <button class="close">X</button>
+                  <form method="POST" class="detail-form">
+                      <label for="name">name</label>
+                      <input type="text" id="name" name="name" placeholder="Name" required="true" class="active-focus">
+                      <label for="email">email-address</label>
+                      <input type="email" id="email" name="email" placeholder="Email address" class="active-focus" required="true">  
+                      <label for ="balance">Account Balance</label>  
+                      <input type="number" min = 0 id="balance">                
+                      <button type="submit" class="btn">Save</button>
+                  </form> 
+              </div>
               </div>
             </div>
             <div class="table">

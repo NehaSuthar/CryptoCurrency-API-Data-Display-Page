@@ -1,4 +1,10 @@
 @import "setup";
+$dark-blue:#343d46;
+$white-color:white;
+$body-background:#c0c5ce;
+$child-background:#a7adba;
+$heightlight-color:#65737e;
+$button-color:#4f5b66;
 html {
   font-size: 62.5%;
   --column-width-min:100px;
@@ -6,7 +12,7 @@ html {
 body {
   text-align: left;
   font-size:2rem;
-  background:#f9f9f9;
+  background:$body-background;
 }
 a{
   text-decoration: none;
@@ -18,8 +24,9 @@ a{
   min-width:320px;
   margin:0 auto;
 }
+//---------------------------navigation bar---------------------------//
 nav{
-  background:#0a0a23;
+  background:$dark-blue;
   text-align:center;
   padding:1rem 0;
   a{
@@ -42,7 +49,7 @@ nav{
   display:flex;
   flex-basis: 25%;
   flex-direction: column;
-  background: white;
+  background:$child-background;
   .profileImgContainer{
     flex-basis: 20%;
     img{
@@ -54,41 +61,46 @@ nav{
   flex-basis: 70%;
   button{
     padding:1rem;
-    background:grey;
+    background:$button-color;
     border:none;
     position:relative;
     top:50%;
     left:20%;
   }
 }
+.btn{
+  background:$button-color;
+  border:none;
+  padding:0 2rem;
+}
 table{
   width: 100%;
   max-width: 100%; 
-  border-collapse: collapse;
 }
 th { 
-  background: #333; 
+  background: $heightlight-color; 
   color: white; 
   font-weight: bold; 
+  padding:1rem;
 }
 th, td {
   text-align: left;
   padding: 8px;
 }
-tr{
-  padding:1rem 0;
-}
 tr:nth-child(even) {
   background-color: #f2f2f2;
 }
+tr{
+  margin:1rem 0;
+}
 .table{
-  background: white;
+  background: $child-background;
   padding:2rem;
   flex-basis: 70%;
+  padding-top:5rem;
 }
 .buyButton{
   padding:.5rem 1rem;
-  background:
 }
 .preNextNav{
   margin-top:2rem;
@@ -102,11 +114,33 @@ tr:nth-child(even) {
   text-decoration: none;
   display: inline-block;
   padding: 1rem 2rem;
-  background: #0a0a23;
+  background: $heightlight-color;
 
 }
 .next{
   margin-left:2rem;
+}
+.close{
+  float:right;
+}
+.showUserDetail{
+  display:none;
+}
+.detail-form{
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display:none;
+  padding: 5rem 2rem;
+  background-color: lightgray;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.red{
+  color:red;
+}
+.green{
+  color:green;
 }
 //------------------------------------footer----------------------------//
 footer{

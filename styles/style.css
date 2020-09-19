@@ -229,7 +229,7 @@ html {
 body {
   text-align: left;
   font-size: 2rem;
-  background: #f9f9f9;
+  background: #c0c5ce;
 }
 
 a {
@@ -245,7 +245,7 @@ a {
 }
 
 nav {
-  background: #0a0a23;
+  background: #343d46;
   text-align: center;
   padding: 1rem 0;
 }
@@ -288,7 +288,7 @@ nav a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: white;
+  background: #a7adba;
 }
 
 .userInfoContainer .profileImgContainer {
@@ -307,23 +307,29 @@ nav a {
 
 .profileInfoContainer button {
   padding: 1rem;
-  background: grey;
+  background: #4f5b66;
   border: none;
   position: relative;
   top: 50%;
   left: 20%;
 }
 
+.btn {
+  background: #4f5b66;
+  border: none;
+  padding: 0 2rem;
+}
+
 table {
   width: 100%;
   max-width: 100%;
-  border-collapse: collapse;
 }
 
 th {
-  background: #333;
+  background: #65737e;
   color: white;
   font-weight: bold;
+  padding: 1rem;
 }
 
 th, td {
@@ -331,23 +337,24 @@ th, td {
   padding: 8px;
 }
 
-tr {
-  padding: 1rem 0;
-}
-
 tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
+tr {
+  margin: 1rem 0;
+}
+
 .table {
-  background: white;
+  background: #a7adba;
   padding: 2rem;
   -ms-flex-preferred-size: 70%;
       flex-basis: 70%;
+  padding-top: 5rem;
 }
 
 .buyButton {
-  padding: 1rem;
+  padding: .5rem 1rem;
 }
 
 .preNextNav {
@@ -369,11 +376,40 @@ tr:nth-child(even) {
   text-decoration: none;
   display: inline-block;
   padding: 1rem 2rem;
-  background: #0a0a23;
+  background: #65737e;
 }
 
 .next {
   margin-left: 2rem;
+}
+
+.close {
+  float: right;
+}
+
+.showUserDetail {
+  display: none;
+}
+
+.detail-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: none;
+  padding: 5rem 2rem;
+  background-color: lightgray;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
 }
 
 footer {
