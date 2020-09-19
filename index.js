@@ -62,12 +62,22 @@ cryptoApp.renderCurrencyData = (currencyData,start) => {
   for(let i=start;i< start+10;i++){
     const cryptoName = $('<td>').text(` ${currencyData[i].name}`);
     const cryptoSymbol = $('<td>').text(`${currencyData[i].symbol}`);
-    const cryptoPrice = $('<td>').text(`$${currencyData[i].quote.USD.price}`);
-    const cryptoVolumeChange = $('<td>').text(`$${currencyData[i].quote.USD.volume_24h}`);
-    const cryptoPriceChange = $('<td>').text(`${currencyData[i].quote.USD.percent_change_24h}%`);
+    let price = currencyData[i].quote.USD.price;
+    price = Math.round(price * 100) / 100;
+    const cryptoPrice = $('<td>').text(`$${price}`);
+    // const cryptoPrice = $('<td>').text(`$${currencyData[i].quote.USD.price}`);
+    let volumeChange = currencyData[i].quote.USD.volume_24h;
+    volumeChange = Math.round(volumeChange * 100) / 100;
+    const cryptoVolumeChange = $('<td>').text(`$${volumeChange}`);
+    // const cryptoVolumeChange = $('<td>').text(`$${currencyData[i].quote.USD.volume_24h}`);
+    let percentChange = currencyData[i].quote.USD.percent_change_24h;
+    percentChange = Math.round(percentChange * 100) / 100;
+    console.log("percent change" + percentChange);
+    const cryptoPriceChange = $('<td>').text(`${percentChange}%`);
+    // const cryptoPriceChange = $('<td>').text(`${currencyData[i].quote.USD.percent_change_24h}%`);
     if(currencyData[i].quote.USD.percent_change_24h <0){
       cryptoPriceChange.addClass('red');
-    }else if(currencyData[i].quote.USD.percent_change_24h > 0){
+    }else { 
       cryptoPriceChange.addClass('green');
     }
     const tradeButton = $('<button>').text(`buy`).addClass('btn');
