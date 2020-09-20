@@ -59,6 +59,7 @@ $('.next').on('keypress',(event)=>{//Previous button functionality
 });
 cryptoApp.renderCurrencyData = (currencyData,start) => {
   $('tbody').empty();
+  $('.pageNumber').text(start);
   for(let i=start;i< start+10;i++){
     const cryptoName = $('<td>').text(` ${currencyData[i].name}`);
     const cryptoSymbol = $('<td>').text(`${currencyData[i].symbol}`);
@@ -84,6 +85,7 @@ cryptoApp.renderCurrencyData = (currencyData,start) => {
     const cryptoRowContainer = $('<tr>')
     cryptoRowContainer.append(cryptoName,cryptoSymbol,cryptoPrice,cryptoVolumeChange,cryptoPriceChange,tradeButton);
     $('tbody').append(cryptoRowContainer);
+
     //coin = $("<h2></h2>").text(`name: ${coin.name} | symbol: ${coin.symbol} | price: $${coin.quote.USD.price}`).addClass("coin");
   }
 }
@@ -92,7 +94,7 @@ cryptoApp.init = ()=>{
     // console.log("API call response:", response.data);
     cryptoApp.currencyDataList = response.data;
     // make call to function that creates html elements for each cryptocurrency coin in the list
-    cryptoApp.recordDisplayCounter += 10;
+    // cryptoApp.recordDisplayCounter += 10;
     cryptoApp.renderCurrencyData(cryptoApp.currencyDataList,0);
   }).catch((err) => {
     console.log("api call error:", err.message);
@@ -114,7 +116,7 @@ $(()=>{
     $('.toggelUserForm').hide();
     const userNameF = $('<h3>').text(`Name: ${userName}`);
     const userEmailF = $('<h3>').text(`Email: ${userEmail}`);
-    const userBalanceF = $('<h3>').text(`Balance: ${userBalance}`);
+    const userBalanceF = $('<h3>').text(`Account balance(USD): $${userBalance}`);
     $('.showUserDetail').append(userNameF,userEmailF,userBalanceF);
     $('.showUserDetail').show();
     $('.detail-form').css('display','none');
