@@ -43,14 +43,16 @@ increaseNextCounter = ()=>{
     cryptoApp.renderCurrencyData(cryptoApp.currencyDataList,cryptoApp.recordDisplayCounter);
   }
 }
-$('.previous').on('click',()=>{//Previous button functionality
+$('.previous').on('click',(e)=>{//Previous button functionality
+  e.preventDefault();
   decreasePreviousCounter();  
 });
 $('.previous').on('keypress',(event)=>{//Previous button functionality
   if(event.keyCode == '13')
     decreasePreviousCounter();  
 });
-$('.next').on('click',()=>{//next button functionality
+$('.next').on('click',(e)=>{//next button functionality
+  e.preventDefault();
   increaseNextCounter();
 });
 $('.next').on('keypress',(event)=>{//Previous button functionality
