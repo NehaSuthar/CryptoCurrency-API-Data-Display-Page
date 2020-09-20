@@ -38,7 +38,7 @@ decreasePreviousCounter = ()=>{
   }
 }
 increaseNextCounter = ()=>{
-  if(cryptoApp.recordDisplayCounter < (cryptoApp.currencyDataList.length)){
+  if(cryptoApp.recordDisplayCounter + 10 < (cryptoApp.currencyDataList.length)){
     cryptoApp.recordDisplayCounter += 10;
     cryptoApp.renderCurrencyData(cryptoApp.currencyDataList,cryptoApp.recordDisplayCounter);
   }
@@ -59,7 +59,7 @@ $('.next').on('keypress',(event)=>{//Previous button functionality
 });
 cryptoApp.renderCurrencyData = (currencyData,start) => {
   $('tbody').empty();
-  $('.pageNumber').text(start);
+  $('.pageNumber').text(`${start} - ${start + 10}`);
   for(let i=start;i< start+10;i++){
     const cryptoName = $('<td>').text(` ${currencyData[i].name}`);
     const cryptoSymbol = $('<td>').text(`${currencyData[i].symbol}`);
