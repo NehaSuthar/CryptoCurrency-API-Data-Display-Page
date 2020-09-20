@@ -50,8 +50,9 @@ nav{
 .detailContainer{
   display:flex;
   margin:2rem auto;
-  justify-content: space-between;
-  height:85vh;
+  // justify-content: space-between;
+  // height:95vh;
+  height: auto;
 }
 .userInfoContainer{
   display:flex;
@@ -107,6 +108,8 @@ tr{
   background: $child-background;
   padding:2rem;
   flex-basis: 70%;
+  // overflow: hidden;
+  // border: solid;
   // padding-top:5rem;
 }
 .buyButton{
@@ -117,6 +120,7 @@ tr{
   display:flex;
   justify-content: center;
   align-items: center;
+  // border: solid;
 }
 .previous,
 .next {
@@ -151,6 +155,15 @@ tr{
 }
 .green{
   color:green;
+}
+.pageNumberContainer {
+  // border: solid;
+  text-align: center;
+  .pageNumber {
+    margin: 10px 0 0 0;
+    font-size: 11px;
+
+  }
 }
 //------------------------------------footer----------------------------//
 footer{
