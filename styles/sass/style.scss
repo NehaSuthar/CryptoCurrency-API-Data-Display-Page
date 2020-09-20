@@ -5,18 +5,26 @@ $body-background:#c0c5ce;
 $child-background:#a7adba;
 $heightlight-color:#65737e;
 $button-color:#4f5b66;
+
+
+// fonts
+$primaryFont: 'Karla', sans-serif;
+$secondaryFont: 'Rubik', sans-serif;
+
 html {
   font-size: 62.5%;
   --column-width-min:100px;
 }
 body {
   text-align: left;
-  font-size:2rem;
+  font-size:1rem;
   background:$body-background;
+  font-family: $secondaryFont;
 }
 a{
   text-decoration: none;
   color:white;
+  font-family: $primaryFont;
 }
 .wrapper{
   width:90%;
@@ -72,6 +80,8 @@ nav{
   background:$button-color;
   border:none;
   padding:0 2rem;
+  width: 100%;
+  height: 28px;
 }
 table{
   width: 100%;

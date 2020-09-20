@@ -72,7 +72,7 @@ cryptoApp.renderCurrencyData = (currencyData,start) => {
     // const cryptoVolumeChange = $('<td>').text(`$${currencyData[i].quote.USD.volume_24h}`);
     let percentChange = currencyData[i].quote.USD.percent_change_24h;
     percentChange = Math.round(percentChange * 100) / 100;
-    console.log("percent change" + percentChange);
+    // console.log("percent change" + percentChange);
     const cryptoPriceChange = $('<td>').text(`${percentChange}%`);
     // const cryptoPriceChange = $('<td>').text(`${currencyData[i].quote.USD.percent_change_24h}%`);
     if(currencyData[i].quote.USD.percent_change_24h <0){

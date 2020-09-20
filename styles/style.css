@@ -242,13 +242,15 @@ html {
 
 body {
   text-align: left;
-  font-size: 2rem;
+  font-size: 1rem;
   background: #c0c5ce;
+  font-family: "Rubik", sans-serif;
 }
 
 a {
   text-decoration: none;
   color: white;
+  font-family: "Karla", sans-serif;
 }
 
 .wrapper {
@@ -332,6 +334,8 @@ nav a {
   background: #4f5b66;
   border: none;
   padding: 0 2rem;
+  width: 100%;
+  height: 28px;
 }
 
 table {
