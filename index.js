@@ -15,7 +15,8 @@ cryptoApp.currentBalance  =0;
 
 cryptoApp.getLiveCryptoData = () => {
   return $.ajax({
-    url: 'http://proxy.hackeryou.com',
+    //url: 'http://proxy.hackeryou.com',
+    url:'https://cors.io/',
     dataType: 'json',
     method:'GET',
     data: {
