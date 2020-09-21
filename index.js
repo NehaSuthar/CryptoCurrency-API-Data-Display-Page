@@ -63,8 +63,13 @@ cryptoApp.renderCurrencyData = (currencyData,start) => {
   $('tbody').empty();
   $('.pageNumber').text(`${start} - ${start + 10}`);
   for(let i=start;i< start+10;i++){
-    const cryptoName = $('<td>').text(` ${currencyData[i].name}`);
-    const cryptoSymbol = $('<td>').text(`${currencyData[i].symbol}`);
+    // const cryptoName = $('<td>').text(`${currencyData[i].name}`);
+    // const cryptoSymbol = $('<td>').text(`${currencyData[i].symbol}`);
+
+    const cryptoName = $('<td>').text(`${currencyData[i].name}`);
+    const cryptoSymbol = $('<span></span>').text(`${currencyData[i].symbol}`);
+    cryptoName.append(cryptoSymbol).addClass('nameWidth');
+
     let price = currencyData[i].quote.USD.price;
     price = Math.round(price * 100) / 100;
     const cryptoPrice = $('<td>').text(`$${price}`);
@@ -85,7 +90,8 @@ cryptoApp.renderCurrencyData = (currencyData,start) => {
     }
     const tradeButton = $('<button>').text(`buy`).addClass('btn');
     const cryptoRowContainer = $('<tr>')
-    cryptoRowContainer.append(cryptoName,cryptoSymbol,cryptoPrice,cryptoVolumeChange,cryptoPriceChange,tradeButton);
+    // TODO: re add cryptoPrice to this append
+    cryptoRowContainer.append(cryptoName,cryptoPrice,cryptoVolumeChange,cryptoPriceChange,tradeButton);
     $('tbody').append(cryptoRowContainer);
 
     //coin = $("<h2></h2>").text(`name: ${coin.name} | symbol: ${coin.symbol} | price: $${coin.quote.USD.price}`).addClass("coin");
