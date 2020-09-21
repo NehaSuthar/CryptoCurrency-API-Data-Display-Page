@@ -12,7 +12,7 @@ cryptoApp.currentPrice = 0;
 cryptoApp.currentBalance  =0;
 
 //----------------ajax call to get data from coinmarketcap API-----START------//
-/*
+
 cryptoApp.getLiveCryptoData = () => {
   return $.ajax({
     url: 'http://proxy.hackeryou.com',
@@ -33,7 +33,8 @@ cryptoApp.getLiveCryptoData = () => {
       useCache: false
     }
   })
-}*/
+}
+/*
 cryptoApp.getLiveCryptoData = () => {
   return $.ajax({
     url: cryptoApp.coinMarketEndPoint,
@@ -46,7 +47,7 @@ cryptoApp.getLiveCryptoData = () => {
         convert: 'USD',
       },
   })
-}
+}*/
 cryptoApp.displayLiveCryptoData = ()=>{
   cryptoApp.getLiveCryptoData().then(response => {
     cryptoApp.currencyDataList = response.data;
