@@ -1,0 +1,60 @@
+    // fonts
+
+html {
+  font-size: 62.5%;
+}
+body {
+  text-align: left;
+  font-size:1rem;
+  background:$body-background;
+  font-family: $secondaryFont;
+}
+a{
+  text-decoration: none;
+  color:white;
+  font-family: $primaryFont;
+}
+.wrapper{
+  width:90%;
+  max-width:1400px;
+  min-width:320px;
+  margin:0 auto;
+}
+h3{
+    color:black;
+    font-size:2rem;
+    margin-bottom:2rem;
+}
+  
+  nav{
+  background:$dark-blue;
+  text-align:center;
+  padding:1rem 0;
+  a{
+    color:white;
+    font-size:2rem;
+  }
+}
+  .fab{
+    font-size:3rem;
+    color:$white-color;;
+  }
+  .red{
+    color:$red;
+  }
+  .green{
+    color:$green;
+  }
+  footer{
+    background:#2c2c2c;
+    width:100%;
+    text-align:center;
+    p{
+      padding: 1rem 0; 
+      color:$white-color;
+    }
+  }
+
+
+
+//---------------------------navigation bar---------------------------//

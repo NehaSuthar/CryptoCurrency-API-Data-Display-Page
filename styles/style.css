@@ -237,13 +237,12 @@ html {
 
 html {
   font-size: 62.5%;
-  --column-width-min:100px;
 }
 
 body {
   text-align: left;
   font-size: 1rem;
-  background: #c0c5ce;
+  background: #EBF5FB;
   font-family: "Rubik", sans-serif;
 }
 
@@ -260,8 +259,14 @@ a {
   margin: 0 auto;
 }
 
+h3 {
+  color: black;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
 nav {
-  background: #343d46;
+  background: #011f4b;
   text-align: center;
   padding: 1rem 0;
 }
@@ -269,6 +274,30 @@ nav {
 nav a {
   color: white;
   font-size: 2rem;
+}
+
+.fab {
+  font-size: 3rem;
+  color: white;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+footer {
+  background: #2c2c2c;
+  width: 100%;
+  text-align: center;
+}
+
+footer p {
+  padding: 1rem 0;
+  color: white;
 }
 
 .flexContainer {
@@ -279,8 +308,6 @@ nav a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 .detailContainer {
@@ -288,7 +315,11 @@ nav a {
   display: -ms-flexbox;
   display: flex;
   margin: 2rem auto;
-  height: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .userInfoContainer {
@@ -301,8 +332,9 @@ nav a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #a7adba;
-  padding: 20px;
+  background: white;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .userInfoContainer .profileImgContainer {
@@ -315,58 +347,160 @@ nav a {
 }
 
 .profileInfoContainer {
-  -ms-flex-preferred-size: 70%;
-      flex-basis: 70%;
+  -ms-flex-preferred-size: 75%;
+      flex-basis: 75%;
+  background: #ECF0F1;
 }
 
-.profileInfoContainer button {
+.profileInfoContainer .toggelUserForm {
   padding: 1rem;
-  background: #4f5b66;
-  border: none;
+  background: #3385c6;
+  margin: 5rem 1rem 0 2rem;
+  /*
+      position:relative;
+      top:20%;
+      left:15%;*/
 }
 
-.btn {
-  background: #4f5b66;
-  border: none;
-  padding: 0 2rem;
+.detailForm {
+  width: 50%;
+  height: auto;
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: none;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: #EBF5FB;
+  color: black;
+}
+
+.userDetailForm {
+  padding: 3rem 5rem;
+  font-size: 2rem;
+}
+
+.userDetailForm input {
   width: 100%;
-  height: 37px;
+  margin: 1rem auto;
+}
+
+.userDetailForm select {
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.userDetailForm button {
+  width: calc(50% - 2rem);
+  padding: 1rem .5rem;
+  margin-top: 1rem;
+}
+
+.userDetailSubmitBtn {
+  background: #3385c6;
+  margin-right: 3rem;
+}
+
+.formHeader {
+  width: 100%;
+  height: 5rem;
+  background: #3385c6;
+}
+
+.showUserDetail {
+  display: none;
+  padding: 3rem 2rem;
+}
+
+.userName {
+  font-size: 3rem;
+  color: #011f4b;
+}
+
+.currencyOwned,
+.userName,
+.userEmailInfo,
+.userBalanceInfo,
+.currencyHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.currencyOwned h3 {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.currencyOwned h3:nth-child(even) {
+  text-align: rigth;
+}
+
+.currencyHeader {
+  border-bottom: .20rem solid black;
+}
+
+.userInfoLable {
+  font-weight: bold;
 }
 
 table {
   width: 100%;
   max-width: 100%;
+  border-collapse: collapse;
+  color: black;
 }
 
 th {
-  background: #65737e;
-  color: white;
+  background: #ECF0F1;
   font-weight: bold;
-  padding: 1rem;
 }
 
 th, td {
   text-align: left;
-  padding: 8px;
+  padding: 1.5rem .5rem;
 }
 
-tr:nth-child(even) {
-  background-color: #f2f2f2;
+tr td:first-child,
+th:first-of-type {
+  padding-left: 2rem;
 }
 
 tr {
-  margin: 1rem 0;
+  border-bottom: solid thin #011f4b;
 }
 
 .table {
-  background: #a7adba;
-  padding: 2rem;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: white;
   -ms-flex-preferred-size: 70%;
       flex-basis: 70%;
+  padding-bottom: 5rem;
+  overflow-x: auto;
+  position: relative;
 }
 
-.buyButton {
-  padding: .5rem 1rem;
+.btn {
+  border: none;
+  border-radius: 20%;
+}
+
+.buyBtn {
+  background: #2E86C1;
+  margin-right: .5rem;
+}
+
+.sellBtn {
+  background: #D35400;
 }
 
 .preNextNav {
@@ -384,44 +518,62 @@ tr {
 
 .previous,
 .next {
-  color: white;
-  text-decoration: none;
   display: inline-block;
   padding: 1rem 2rem;
-  background: #65737e;
+  background: #283655;
 }
 
 .next {
   margin-left: 2rem;
 }
 
-.close {
-  float: right;
-}
-
-.showUserDetail {
+.tradeForm {
   display: none;
-}
-
-.detail-form {
+  width: 60%;
+  height: auto;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  bottom: 40%;
+  right: 10%;
   display: none;
-  padding: 5rem 2rem;
-  background-color: lightgray;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: #EBF5FB;
+  color: black;
 }
 
-.red {
-  color: red;
+.tradeDetailForm {
+  padding: 3rem 5rem;
+  font-size: 2rem;
 }
 
-.green {
-  color: green;
+.tradeDetailForm button {
+  width: calc(50% - 2rem);
+  padding: 1rem .5rem;
+  margin-top: 1rem;
+}
+
+.formHeaderTrade {
+  width: 100%;
+  height: 5rem;
+  background: #3385c6;
+}
+
+.currencyInfoTrade,
+.userTradeAction,
+.currencyInfoTrade {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.currencyInfoTrade h3,
+.userTradeAction h3,
+.currencyInfoTrade h3 {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .pageNumberContainer {
@@ -442,7 +594,6 @@ span {
   min-width: 100px;
 }
 
-/* Portrait tablet and small desktops */
 @media (max-width: 974px) {
   .detailContainer {
     display: block;
@@ -455,13 +606,3 @@ span {
 
 /* Landscape phone to portrait tablet */
 /* Landscape phones and down */
-footer {
-  background: #2c2c2c;
-  width: 100%;
-  text-align: center;
-}
-
-footer p {
-  padding: 1rem 0;
-  color: white;
-}

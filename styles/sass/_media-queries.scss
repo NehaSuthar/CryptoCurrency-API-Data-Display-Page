@@ -1,0 +1,21 @@
+@media (max-width: 974px) {
+
+    .detailContainer {
+      display: block;
+    }
+  
+    .profileImgContainer{
+      img{
+        width:40%;
+        margin: 0 auto;
+      }
+    }
+  }
+  
+  /* Landscape phone to portrait tablet */
+  @media (max-width: 768px) {
+  }
+  
+  /* Landscape phones and down */
+  @media (max-width: 480px) {
+  }

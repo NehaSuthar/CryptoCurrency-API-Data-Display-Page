@@ -1,0 +1,113 @@
+table{
+    width: 100%;
+    max-width: 100%; 
+    border-collapse: collapse; 
+    color:black;
+  }
+  th { 
+    background:#ECF0F1;
+    font-weight: bold;
+  }
+  th, td {
+    text-align: left;
+    padding:1.5rem .5rem;
+  }
+  tr td:first-child,
+  th:first-of-type{
+    padding-left:2rem;
+  }
+  tr{ 
+    border-bottom: solid thin $dark-blue; 
+  }
+  .headColumn{
+    
+  }
+  .table{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: $child-background;
+    flex-basis:70%;
+    padding-bottom:5rem;
+    overflow-x:auto;
+    position:relative;
+  }
+  .btn{
+    border:none;
+    border-radius: 20%;
+  }
+  .buyBtn{
+    background:#2E86C1;
+    margin-right:.5rem;
+  }
+  .sellBtn{
+    background:#D35400;
+  }
+  .preNextNav{
+    margin-top:2rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .previous,
+  .next {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #283655;
+  
+  }
+  .next{
+    margin-left:2rem;
+  }
+  .tradeForm{
+    display:none;
+    width:60%;
+    height: auto;
+    position:absolute;
+    bottom:40%;
+    right:10%;
+    display:none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
+    background:$body-background;
+    color:black;
+  }
+  .tradeDetailForm{
+    padding:3rem 5rem;
+    font-size:2rem;
+    button{
+      width:calc(50% - 2rem);
+      padding:1rem .5rem;
+      margin-top:1rem;
+    }     
+  }
+  .formHeaderTrade{
+    width:100%;
+    height:5rem;
+    background: $button-color;
+  }
+  .currencyInfoTrade,
+  .userTradeAction,
+  .currencyInfoTrade{
+    display:flex;
+    justify-content: space-between;
+    h3{
+      align-self: flex-start;
+    }
+  }
+
+.pageNumberContainer{
+  // border: solid;
+  text-align: center;
+  .pageNumber {
+    margin: 10px 0 0 0;
+    font-size: 11px;
+  }
+}
+
+span {
+  font-size: 8px;
+  // color: grey;
+  display: block;
+}
+
+.nameWidth {
+  min-width: 100px;
+}
