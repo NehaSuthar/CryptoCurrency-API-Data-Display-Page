@@ -38,7 +38,7 @@ cryptoApp.getLiveCryptoData = () => {
 cryptoApp.getLiveCryptoData = () => {
   return $.ajax({
     url: cryptoApp.coinMarketEndPoint,
-    dataType: 'JSONP',
+    dataType: 'JSON',
     method:'GET',
     data: {
         CMC_PRO_API_KEY: cryptoApp.apiKey,
