@@ -12,6 +12,7 @@ cryptoApp.currentPrice = 0;
 cryptoApp.currentBalance  =0;
 
 //----------------ajax call to get data from coinmarketcap API-----START------//
+/*
 cryptoApp.getLiveCryptoData = () => {
   return $.ajax({
     url: 'http://proxy.hackeryou.com',
@@ -31,6 +32,19 @@ cryptoApp.getLiveCryptoData = () => {
       xmlToJSON: false,
       useCache: false
     }
+  })
+}*/
+cryptoApp.getLiveCryptoData = () => {
+  return $.ajax({
+    url: cryptoApp.coinMarketEndPoint,
+    dataType: 'json',
+    method:'GET',
+    data: {
+        CMC_PRO_API_KEY: cryptoApp.apiKey,
+        start: 1,
+        limit: 200,
+        convert: 'USD',
+      },
   })
 }
 cryptoApp.displayLiveCryptoData = ()=>{
