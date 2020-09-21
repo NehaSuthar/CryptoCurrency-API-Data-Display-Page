@@ -129,7 +129,6 @@ tr{
   display: inline-block;
   padding: 1rem 2rem;
   background: $heightlight-color;
-
 }
 .next{
   margin-left:2rem;
@@ -156,7 +155,7 @@ tr{
 .green{
   color:green;
 }
-.pageNumberContainer {
+.pageNumberContainer{
   // border: solid;
   text-align: center;
   .pageNumber {
@@ -171,7 +170,6 @@ span {
   display: block;
 }
 
-
 .nameWidth {
   min-width: 100px;
 }
@@ -179,6 +177,17 @@ span {
 // media queries
 /* Portrait tablet and small desktops */
 @media (max-width: 974px) {
+
+  .detailContainer {
+    display: block;
+  }
+
+  .profileImgContainer{
+    img{
+      width:40%;
+      margin: 0 auto;
+    }
+  }
 }
 
 /* Landscape phone to portrait tablet */

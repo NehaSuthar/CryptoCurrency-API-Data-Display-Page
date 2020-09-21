@@ -443,6 +443,16 @@ span {
 }
 
 /* Portrait tablet and small desktops */
+@media (max-width: 974px) {
+  .detailContainer {
+    display: block;
+  }
+  .profileImgContainer img {
+    width: 40%;
+    margin: 0 auto;
+  }
+}
+
 /* Landscape phone to portrait tablet */
 /* Landscape phones and down */
 footer {
