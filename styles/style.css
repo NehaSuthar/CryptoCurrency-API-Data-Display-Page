@@ -223,17 +223,13 @@ textarea {
 
 html {
   font-size: 62.5%;
-  --column-width-min:100px;
 }
 
 body {
   text-align: left;
   font-size: 2rem;
-  background: #c0c5ce;
-}
-
-a {
-  text-decoration: none;
+  background: #EBF5FB;
+  height: 100vh;
   color: white;
 }
 
@@ -244,164 +240,27 @@ a {
   margin: 0 auto;
 }
 
-nav {
-  background: #343d46;
-  text-align: center;
-  padding: 1rem 0;
+h3 {
+  color: black;
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
-nav a {
+a {
+  text-decoration: none;
   color: white;
   font-size: 2rem;
 }
 
-.flexContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+nav {
+  background: #011f4b;
+  text-align: center;
+  padding: 1rem 0;
 }
 
-.detailContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 2rem auto;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 85vh;
-}
-
-.userInfoContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-preferred-size: 25%;
-      flex-basis: 25%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background: #a7adba;
-}
-
-.userInfoContainer .profileImgContainer {
-  -ms-flex-preferred-size: 20%;
-      flex-basis: 20%;
-}
-
-.userInfoContainer .profileImgContainer img {
-  width: 100%;
-}
-
-.profileInfoContainer {
-  -ms-flex-preferred-size: 70%;
-      flex-basis: 70%;
-}
-
-.profileInfoContainer button {
-  padding: 1rem;
-  background: #4f5b66;
-  border: none;
-  position: relative;
-  top: 50%;
-  left: 20%;
-}
-
-.btn {
-  background: #4f5b66;
-  border: none;
-  padding: 0 2rem;
-}
-
-table {
-  width: 100%;
-  max-width: 100%;
-}
-
-th {
-  background: #65737e;
+.fab {
+  font-size: 3rem;
   color: white;
-  font-weight: bold;
-  padding: 1rem;
-}
-
-th, td {
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-tr {
-  margin: 1rem 0;
-}
-
-.table {
-  background: #a7adba;
-  padding: 2rem;
-  -ms-flex-preferred-size: 70%;
-      flex-basis: 70%;
-  padding-top: 5rem;
-}
-
-.buyButton {
-  padding: .5rem 1rem;
-}
-
-.preNextNav {
-  margin-top: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.previous,
-.next {
-  color: white;
-  text-decoration: none;
-  display: inline-block;
-  padding: 1rem 2rem;
-  background: #65737e;
-}
-
-.next {
-  margin-left: 2rem;
-}
-
-.close {
-  float: right;
-}
-
-.showUserDetail {
-  display: none;
-}
-
-.detail-form {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  display: none;
-  padding: 5rem 2rem;
-  background-color: lightgray;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .red {
@@ -421,4 +280,278 @@ footer {
 footer p {
   padding: 1rem 0;
   color: white;
+}
+
+.flexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.detailContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2rem auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.userInfoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: white;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.userInfoContainer .profileImgContainer {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+}
+
+.userInfoContainer .profileImgContainer img {
+  width: 100%;
+}
+
+.profileInfoContainer {
+  -ms-flex-preferred-size: 75%;
+      flex-basis: 75%;
+  background: #ECF0F1;
+}
+
+.profileInfoContainer .toggelUserForm {
+  padding: 1rem;
+  background: #3385c6;
+  position: relative;
+  top: 20%;
+  left: 15%;
+}
+
+.detailForm {
+  width: 50%;
+  height: auto;
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: none;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: #EBF5FB;
+  color: black;
+}
+
+.userDetailForm {
+  padding: 3rem 5rem;
+  font-size: 2rem;
+}
+
+.userDetailForm input {
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.userDetailForm select {
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.userDetailForm button {
+  width: calc(50% - 2rem);
+  padding: 1rem .5rem;
+  margin-top: 1rem;
+}
+
+.userDetailSubmitBtn {
+  background: #3385c6;
+  margin-right: 3rem;
+}
+
+.formHeader {
+  width: 100%;
+  height: 5rem;
+  background: #3385c6;
+}
+
+.showUserDetail {
+  display: none;
+  padding: 3rem 2rem;
+}
+
+.userName {
+  font-size: 3rem;
+  color: #011f4b;
+}
+
+.currencyOwned,
+.userName,
+.userEmailInfo,
+.userBalanceInfo,
+.currencyHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.currencyOwned h3 {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.currencyOwned h3:nth-child(even) {
+  text-align: rigth;
+}
+
+.currencyHeader {
+  border-bottom: .20rem solid black;
+}
+
+.userInfoLable {
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  color: black;
+}
+
+th {
+  background: #ECF0F1;
+  font-weight: bold;
+}
+
+th, td {
+  text-align: left;
+  padding: 1.5rem .5rem;
+}
+
+tr td:first-child,
+th:first-of-type {
+  padding-left: 2rem;
+}
+
+tr {
+  border-bottom: solid thin #011f4b;
+}
+
+.table {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: white;
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+  padding-bottom: 5rem;
+  overflow-x: auto;
+  position: relative;
+}
+
+.btn {
+  border: none;
+  border-radius: 20%;
+}
+
+.buyBtn {
+  background: #2E86C1;
+  margin-right: .5rem;
+}
+
+.sellBtn {
+  background: #D35400;
+}
+
+.preNextNav {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.previous,
+.next {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #283655;
+}
+
+.next {
+  margin-left: 2rem;
+}
+
+.tradeForm {
+  display: none;
+  width: 60%;
+  height: auto;
+  position: absolute;
+  bottom: 40%;
+  right: 10%;
+  display: none;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: #EBF5FB;
+  color: black;
+}
+
+.tradeDetailForm {
+  padding: 3rem 5rem;
+  font-size: 2rem;
+}
+
+.tradeDetailForm button {
+  width: calc(50% - 2rem);
+  padding: 1rem .5rem;
+  margin-top: 1rem;
+}
+
+.formHeaderTrade {
+  width: 100%;
+  height: 5rem;
+  background: #3385c6;
+}
+
+.currencyInfoTrade,
+.userTradeAction,
+.currencyInfoTrade {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.currencyInfoTrade h3,
+.userTradeAction h3,
+.currencyInfoTrade h3 {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }

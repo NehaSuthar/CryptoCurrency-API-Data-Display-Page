@@ -4,15 +4,19 @@
     <title>Crypto Trade</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Offside&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">     
     <link rel="stylesheet" href="./styles/style.css">
   </head>
   <body>
     <main>
-      <div>
-        <div class="flexContainer">
-            <nav class="navContainer">
-              <a>CryptoBazar</a>
-            </nav>
+      <div class="flexContainer">
+        <header>
+          <nav class="navContainer">
+            <a>CryptoBazar</a>
+            <i class="fab fa-bitcoin"></i>
+          </nav>
+        </header>
           <div class="detailContainer wrapper">
             <div class="userInfoContainer">
               <div class="profileImgContainer">
@@ -21,17 +25,34 @@
               <div class="profileInfoContainer">
                 <button class="toggelUserForm">Enter User Details</button>
                 <div class= "showUserDetail">
+                  <div class="userInfo">
+                    <div class="userName"></div>
+                    <div class="userEmailInfo"></div>
+                    <div class="userBalanceInfo"></div>
+                  </div>
+                  <div class="currencyInfo">
+                    <div class="currencyHeader"></div>
+                    <div class="currencyOwned"></div>
+                  </div>
                 </div>
-                <div class="detail-form" id="detail-form">
-                  <button class="close">X</button>
-                  <form method="POST" class="detail-form">
-                      <label for="name">name</label>
-                      <input type="text" id="name" name="name" placeholder="Name" required="true" class="active-focus">
-                      <label for="email">email-address</label>
-                      <input type="email" id="email" name="email" placeholder="Email address" class="active-focus" required="true">  
-                      <label for ="balance">Account Balance</label>  
-                      <input type="number" min = 0 id="balance">                
-                      <button type="submit" class="btn">Save</button>
+                <div class="detailForm">
+                  <div class="formHeader">
+                  </div>
+                  <form method="POST" class="userDetailForm">                   
+                      <label for="name">Full Name</label>
+                      <input type="text" id="name" name="name" placeholder="Name" required="true">
+                      <label for="email">Email-Address</label>
+                      <input type="email" id="email" name="email" placeholder="Email address" required="true">  
+                      <label for ="balance">Account Balance(USD)</label>  
+                      <input type="number" min = 0 id="balance" placeholder="0"> 
+                      <label for ="cryptoOptionSelect" class="cryptoOptionslb">Select Currency</label> 
+                      <select class="cryptoOptions" id="cryptoOptionSelect">
+                        <option>select Currency</option>
+                      </select> 
+                        <label for ="cryptoQty" class="cryptoQtylb">Qty</label>                                               
+                      <input type="number" min = 0 id="cryptoQty" placeholder=0 class="cryptoQty">       
+                      <button type="submit" class="userDetailSubmitBtn">Save</button>
+                      <button class="userDetailCloseBtn">Cancel</button>                  
                   </form> 
               </div>
               </div>
@@ -44,7 +65,7 @@
                     <th>Symbol</th>
                     <th>Price</th>
                     <th>volume_24h</th>
-                    <th>percent_change_24h</th>
+                    <th>%change_24h</th>
                     <th>Trade</th>
                   </tr>
                 </thead>
@@ -53,8 +74,22 @@
               </table>
               <div class="preNextNav">
                 <a href="#" class="previous">&laquo;</a>
-              <a href="#" class="next">&raquo;</a>
+                <a href="#" class="next">&raquo;</a>
               </div>
+              <div class="tradeForm">
+                <div class="formHeaderTrade">
+                </div>
+                <form method="POST" class="tradeDetailForm">
+                    <div class="currencyInfoTrade"></div>  
+                    <div class="userTradeAction">
+                      <label for ="userTradeActionQty" class="userInfoLable">Quantity: </label>
+                      <input type="number" min = 0  id="userTradeActionQty" placeholder=0></input>
+                    </div>
+                    <div class="validationMsg"></div>               
+                    <button type="submit" class="tradeDetailSubmitBtn">Submit</button>
+                    <button class="tradeDetailCloseBtn">Cancel</button>                  
+                </form> 
+            </div>
             </div> 
           </div>        
         </div>

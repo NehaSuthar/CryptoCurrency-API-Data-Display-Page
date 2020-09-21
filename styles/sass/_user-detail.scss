@@ -1,0 +1,94 @@
+.userInfoContainer{
+    display:flex;
+    flex-basis: 25%;
+    flex-direction: column;
+    background:$child-background;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    .profileImgContainer{
+      flex-basis: 20%;
+      img{
+        width:100%;
+      }
+    }
+  }
+  .profileInfoContainer{
+    flex-basis: 75%;
+    background:#ECF0F1;
+    .toggelUserForm{
+      padding:1rem;
+      background:$button-color;
+      position:relative;
+      top:20%;
+      left:15%;
+    }
+  }
+  .detailForm{
+    width:50%;
+    height: auto;
+    position:absolute;
+    z-index:10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display:none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
+    background:$body-background;
+    color:black;
+  } 
+  .userDetailForm{
+    padding:3rem 5rem;
+    font-size:2rem;
+    input{
+      width:100%;
+      margin:1rem auto;
+    }
+    select{
+      width:100%;
+      margin:1rem auto;
+    }
+    button{
+      width:calc(50% - 2rem);
+      padding:1rem .5rem;
+      margin-top:1rem;
+    }     
+  }
+  .userDetailSubmitBtn{
+    background: $button-color;
+    margin-right: 3rem;
+  }
+  .formHeader{
+    width:100%;
+    height:5rem;
+    background: $button-color;
+  }
+  .showUserDetail{
+    display:none;
+    padding:3rem 2rem;
+  }
+  .userName{
+    font-size: 3rem;
+    color:$dark-blue;
+  }
+  .currencyOwned,
+  .userName,
+  .userEmailInfo,
+  .userBalanceInfo,
+  .currencyHeader{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .currencyOwned{
+    h3{
+      flex-basis: 50%;
+    }
+     h3:nth-child(even){
+    text-align: rigth;
+  }
+  }
+  .currencyHeader{
+    border-bottom: .20rem solid black;
+  }
+  .userInfoLable{
+    font-weight: bold;
+  }
