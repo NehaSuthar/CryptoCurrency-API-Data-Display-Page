@@ -12,9 +12,8 @@ cryptoApp.currentPrice = 0;
 cryptoApp.currentBalance  =0;
 
 //----------------ajax call to get data from coinmarketcap API-----START------//
-
+/*
 cryptoApp.getLiveCryptoData = () => {
-  /*
   return $.ajax({
     url: 'http://proxy.hackeryou.com',
     //url:'https://cors.io/',
