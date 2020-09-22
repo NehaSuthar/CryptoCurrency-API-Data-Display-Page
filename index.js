@@ -54,7 +54,6 @@ cryptoApp.displayLiveCryptoData = ()=>{
   cryptoApp.getLiveCryptoData().then(response => {
     cryptoApp.currencyDataList = response.data;
     // make call to function that creates html elements for each cryptocurrency coin in the list
-    // cryptoApp.recordDisplayCounter += 10;
     cryptoApp.renderCurrencyData(cryptoApp.currencyDataList,0);
   }).catch((err) => {
     console.log("coin market api call error:", err.message);

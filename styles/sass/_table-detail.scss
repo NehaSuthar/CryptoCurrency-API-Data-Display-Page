@@ -28,7 +28,6 @@ table{
     // position:relative;
   }
   .btn{
-    border:none;
     &:hover,
     &:focus{
       transform: scale(1.1); 
@@ -75,9 +74,13 @@ table{
   .tradeDetailForm{
     padding:3rem 5rem;
     font-size:2rem;
+    .tradeDetailSubmitBtn {
+      background-color: $button-color;
+      margin-right: 2rem;
+    } 
     button{
       width:calc(50% - 2rem);
-      padding:1rem .5rem;
+      padding:1rem 0;
       margin-top:1rem;
     }     
   }

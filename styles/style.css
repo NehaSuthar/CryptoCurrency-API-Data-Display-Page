@@ -327,6 +327,7 @@ footer p {
 
 .userInfoContainer .profileImgContainer {
   width: 50%;
+  margin: 0 auto;
 }
 
 .userInfoContainer .profileImgContainer img {
@@ -435,11 +436,6 @@ footer p {
       flex-wrap: wrap;
 }
 
-.currencyOwned h3 {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-}
-
 .currencyOwned h3:nth-child(even) {
   text-align: rigth;
 }
@@ -486,10 +482,6 @@ tr {
       flex-basis: 70%;
   padding-bottom: 5rem;
   overflow-x: auto;
-}
-
-.btn {
-  border: none;
 }
 
 .btn:hover, .btn:focus {
@@ -552,9 +544,14 @@ tr {
   font-size: 2rem;
 }
 
+.tradeDetailForm .tradeDetailSubmitBtn {
+  background-color: #3385c6;
+  margin-right: 2rem;
+}
+
 .tradeDetailForm button {
   width: calc(50% - 2rem);
-  padding: 1rem .5rem;
+  padding: 1rem 0;
   margin-top: 1rem;
 }
 
@@ -607,6 +604,58 @@ span {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  /* Landscape phone to portrait tablet */
-  /* Landscape phones and down */
+  .profileInfoContainer {
+    margin-bottom: 200px;
+  }
+  .profileInfoContainer .toggelUserForm {
+    margin: 5rem 0 2rem 5rem;
+  }
+  .detailForm,
+  .tradeForm {
+    width: 80%;
+  }
+  .tradeForm {
+    position: absolute;
+    bottom: 20%;
+    right: 10%;
+  }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .detailForm {
+    font-size: 1rem;
+  }
+  .detailForm,
+  .tradeForm {
+    width: 70%;
+  }
+  .tradeForm {
+    left: 10%;
+  }
+  .tradeDetailForm {
+    padding: 10px 0 10px 20px;
+  }
+  .currencyInfoTrade,
+  .userTradeAction,
+  .currencyInfoTrade {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .profileInfoContainer {
+    margin-bottom: 100px;
+  }
+  .detailForm,
+  .tradeForm {
+    width: 100%;
+  }
+  .showUserDetail {
+    padding: 1rem;
+  }
 }
