@@ -24,7 +24,7 @@
                 <img id="profileImage" src="./images/Image.png">
               </div>
               <div class="profileInfoContainer">
-                <button class="toggelUserForm">Enter User Details</button>
+                <button class="toggelUserForm btn">Enter User Details</button>
                 <div class= "showUserDetail">
                   <div class="userInfo">
                     <div class="userName"></div>
@@ -52,8 +52,9 @@
                       </select> 
                         <label for ="cryptoQty" class="cryptoQtylb">Qty</label>                                               
                       <input type="number" min = 0 id="cryptoQty" placeholder=0 class="cryptoQty">       
-                      <button type="submit" class="userDetailSubmitBtn">Save</button>
-                      <button class="userDetailCloseBtn">Cancel</button>                  
+                      <button type="submit" class="userDetailSubmitBtn btn">Save</button>
+                      <button class="userDetailCloseBtn btn" onclick="return false;">Cancel</button>                  
+
                   </form> 
                 </div>
               </div>
@@ -62,9 +63,7 @@
               <table>
                 <thead>
                   <tr>
-                    <!-- TODO:  -->
                     <th>Name</th>
-                    <!-- <th>Symbol</th> -->
                     <th>Price</th>
                     <th>Volume<span>(24hr)</span></th>
                     <th>Change<span>(24hr)</span></th>
@@ -75,8 +74,8 @@
                 </tbody>
               </table>
               <div class="preNextNav">
-                <a href="#" class="previous">&laquo;</a>
-                <a href="#" class="next">&raquo;</a>
+                <a href="#" class="previous btn">&laquo;</a>
+                <a href="#" class="next btn">&raquo;</a>
               </div>
               <div class="pageNumberContainer">
                 <h1 class="pageNumber">0 - 10</h1>
@@ -91,8 +90,8 @@
                       <input type="number" min = 0  id="userTradeActionQty" placeholder=0></input>
                     </div>
                     <div class="validationMsg"></div>               
-                    <button type="submit" class="tradeDetailSubmitBtn">Submit</button>
-                    <button class="tradeDetailCloseBtn">Cancel</button>                  
+                    <button type="submit" class="tradeDetailSubmitBtn btn">Submit</button>
+                    <button class="tradeDetailCloseBtn btn" onclick="return false;">Cancel</button>                  
                 </form> 
             </div>
             </div> 

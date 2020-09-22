@@ -491,16 +491,23 @@ tr {
 
 .btn {
   border: none;
-  border-radius: 20%;
+}
+
+.btn:hover, .btn:focus {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  border: solid 0.1rem #011f4b;
 }
 
 .buyBtn {
   background: #2E86C1;
   margin-right: .5rem;
+  border-radius: 20%;
 }
 
 .sellBtn {
   background: #D35400;
+  border-radius: 20%;
 }
 
 .preNextNav {

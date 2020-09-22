@@ -114,8 +114,8 @@ cryptoApp.renderCurrencyData = (currencyData,start) => {
       cryptoPriceChange.addClass('green');
     }
     const tradeButton = $('<td>');
-    const buyButton = $('<button>').text(`B`).addClass('buyBtn btn');
-    const sellButton = $('<button>').text(`S`).addClass('sellBtn btn');
+    const buyButton = $('<button>').text(`B`).addClass('buyBtn btn grow');
+    const sellButton = $('<button>').text(`S`).addClass('sellBtn btn grow');
     tradeButton.append(buyButton,sellButton);
     const cryptoRowContainer = $('<tr>');
     // TODO: re add cryptoPrice to this append
