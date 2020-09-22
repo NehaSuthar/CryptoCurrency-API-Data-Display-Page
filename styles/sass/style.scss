@@ -4,22 +4,21 @@ $body-background:#EBF5FB;
 $child-background:white;
 $heightlight-color:#EBF5FB;
 $button-color:#4f5b66;
+
+$primaryFont: 'Karla', sans-serif;
+$secondaryFont: 'Rubik', sans-serif;
 $green:green;
 $red:red;
 $t-header:#B3B6B7;
 $button-color:#3385c6;
+
 @import "setup";
 @import "generic";
 .flexContainer{
   display:flex;
   flex-direction: column;
 }
-.detailContainer{
-  display:flex;
-  margin:2rem auto;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
+
 @import "user-detail";
 @import "table-detail";
 @import "media-queries";

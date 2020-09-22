@@ -1,0 +1,77 @@
+@media (max-width: 974px) {
+
+    .detailContainer {
+      flex-direction: column;
+    }
+
+    .profileInfoContainer {
+      margin-bottom: 200px;
+      .toggelUserForm {
+        margin: 5rem 0 2rem 5rem;
+      } 
+    }
+
+    .detailForm,
+    .tradeForm {
+      width: 80%;
+    }
+    .tradeForm{
+      position:absolute;
+      bottom:20%;
+      right:10%;
+    } 
+    // .userInfoContainer {
+    //   flex-direction: row;
+    //   // flex-basis: 100%;
+    // }
+    // .profileImgContainer{
+    //   flex-basis: 30%;
+    // }
+    // .table {
+    //   flex-basis: 100%;
+    // }
+    // .profileInfoContainer {
+    //   flex-basis: 70%;
+    // }
+  
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .detailForm {
+    font-size: 1rem;
+  }
+  .detailForm,
+  .tradeForm {
+    width: 70%;
+  }
+
+  .tradeForm {
+    left: 10%;
+  }
+
+  .tradeDetailForm {
+    padding: 10px 0 10px 20px;
+
+  }
+  .currencyInfoTrade,
+  .userTradeAction,
+  .currencyInfoTrade{
+    flex-direction: column;
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .profileInfoContainer {
+    margin-bottom: 100px;
+  }
+  .detailForm,
+  .tradeForm {
+    width: 100%;
+  }
+
+  .showUserDetail {
+    padding: 1rem;
+  }
+}

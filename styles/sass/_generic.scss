@@ -1,34 +1,40 @@
+    // fonts
+
 html {
-    font-size: 62.5%;
-  }
-  body {
-    text-align: left;
-    font-size:2rem;
-    background:$body-background;
-    height:100vh;
-    color:white;
-  }
-  .wrapper{
-    width:90%;
-    max-width:1400px;
-    min-width:320px;
-    margin:0 auto;
-  }
-  h3{
+  font-size: 62.5%;
+}
+body {
+  text-align: left;
+  font-size:1rem;
+  background:$body-background;
+  font-family: $secondaryFont;
+}
+a{
+  text-decoration: none;
+  color:white;
+  font-family: $primaryFont;
+}
+.wrapper{
+  width:90%;
+  max-width:1400px;
+  min-width:320px;
+  margin:0 auto;
+}
+h3{
     color:black;
     font-size:2rem;
     margin-bottom:2rem;
-  }
+}
+  
+  nav{
+  background:$dark-blue;
+  text-align:center;
+  padding:1rem 0;
   a{
-    text-decoration: none;
-    color:$white-color;
+    color:white;
     font-size:2rem;
   }
-  nav{
-    background:$dark-blue;
-    text-align:center;
-    padding:1rem 0;
-  }
+}
   .fab{
     font-size:3rem;
     color:$white-color;;
@@ -48,3 +54,7 @@ html {
       color:$white-color;
     }
   }
+
+
+
+//---------------------------navigation bar---------------------------//

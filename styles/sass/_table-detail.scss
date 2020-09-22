@@ -19,27 +19,29 @@ table{
   tr{ 
     border-bottom: solid thin $dark-blue; 
   }
-  .headColumn{
-    
-  }
   .table{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background: $child-background;
     flex-basis:70%;
     padding-bottom:5rem;
     overflow-x:auto;
-    position:relative;
+    // position:relative;
   }
   .btn{
-    border:none;
-    border-radius: 20%;
+    &:hover,
+    &:focus{
+      transform: scale(1.1); 
+      border: solid .1rem $dark-blue;
+  }
   }
   .buyBtn{
     background:#2E86C1;
     margin-right:.5rem;
+    border-radius: 20%;
   }
   .sellBtn{
     background:#D35400;
+    border-radius: 20%;
   }
   .preNextNav{
     margin-top:2rem;
@@ -72,9 +74,13 @@ table{
   .tradeDetailForm{
     padding:3rem 5rem;
     font-size:2rem;
+    .tradeDetailSubmitBtn {
+      background-color: $button-color;
+      margin-right: 2rem;
+    } 
     button{
       width:calc(50% - 2rem);
-      padding:1rem .5rem;
+      padding:1rem 0;
       margin-top:1rem;
     }     
   }
@@ -92,3 +98,23 @@ table{
       align-self: flex-start;
     }
   }
+
+.pageNumberContainer{
+  // border: solid;
+  text-align: center;
+  .pageNumber {
+    margin: 10px 0 0 0;
+    font-size: 11px;
+  }
+}
+
+span {
+  font-size: 8px;
+  // color: grey;
+  display: block;
+}
+
+.nameWidth {
+  min-width: 100px;
+}
+
