@@ -345,10 +345,6 @@ footer p {
   background: #3385c6;
   width: 80%;
   margin: 5rem 0 2rem 2rem;
-  /*
-      position:relative;
-      top:20%;
-      left:15%;*/
 }
 
 .detailForm {
@@ -386,6 +382,17 @@ footer p {
   width: calc(50% - 2rem);
   padding: 1rem .5rem;
   margin-top: 1rem;
+}
+
+.currencyOwned h3 {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+}
+
+.currencyOwned h3:nth-child(even) {
+  -ms-flex-preferred-size: calc(30% - 2rem);
+      flex-basis: calc(30% - 2rem);
+  margin-left: 2rem;
 }
 
 .detailContainer {
@@ -434,10 +441,6 @@ footer p {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-.currencyOwned h3:nth-child(even) {
-  text-align: rigth;
 }
 
 .currencyHeader {
@@ -619,6 +622,15 @@ span {
     bottom: 20%;
     right: 10%;
   }
+  .currencyOwned h3 {
+    -ms-flex-preferred-size: 90%;
+        flex-basis: 90%;
+  }
+  .currencyOwned h3:nth-child(even) {
+    -ms-flex-preferred-size: calc(10% - 2rem);
+        flex-basis: calc(10% - 2rem);
+    margin-left: 2rem;
+  }
 }
 
 /* Landscape phone to portrait tablet */
@@ -657,5 +669,14 @@ span {
   }
   .showUserDetail {
     padding: 1rem;
+  }
+  .currencyOwned h3 {
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+  }
+  .currencyOwned h3:nth-child(even) {
+    -ms-flex-preferred-size: calc(20% - 1rem);
+        flex-basis: calc(20% - 1rem);
+    margin-left: 1rem;
   }
 }

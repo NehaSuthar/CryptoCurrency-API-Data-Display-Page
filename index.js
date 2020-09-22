@@ -17,39 +17,13 @@ cryptoApp.currentBalance = 0;
 cryptoApp.getLiveCryptoData = () => {
   return $.ajax({
     url: 'https://jsonp.afeld.me/',
-    // url: 'http://proxy.hackeryou.com',
-    // url: 'https://cors.io/',
     dataType: 'json',
     method:'GET',
     data: {
       url: cryptoApp.coinMarketEndPoint,
-    //   params: {
-    //     CMC_PRO_API_KEY: cryptoApp.apiKey,
-    //     start: 1,
-    //     limit: 200,
-    //     convert: 'USD',
-    //   },
-    //   proxyHeaders: {
-    //     'Some-Header': 'goes here'
-    //   },
-    //   xmlToJSON: false,
-    //   useCache: false
     }
   })
 }
-// cryptoApp.getLiveCryptoData = () => {
-//   return $.ajax({
-//     url: cryptoApp.coinMarketEndPoint,
-//     dataType: 'JSON',
-//     method:'GET',
-//     data: {
-//         CMC_PRO_API_KEY: cryptoApp.apiKey,
-//         start: 1,
-//         limit: 200,
-//         convert: 'USD',
-//       },
-//   })
-// }
 cryptoApp.displayLiveCryptoData = ()=>{
   cryptoApp.getLiveCryptoData().then(response => {
     cryptoApp.currencyDataList = response.data;
@@ -87,8 +61,6 @@ cryptoApp.renderCurrencyData = (currencyData,start) => {
   $('tbody').empty();
   $('.pageNumber').text(`${start} - ${start + 10}`);
   for(let i=start;i< start+10;i++){
-    // const cryptoName = $('<td>').text(`${currencyData[i].name}`);
-    // const cryptoSymbol = $('<td>').text(`${currencyData[i].symbol}`);
 
     const cryptoName = $('<td>').text(`${currencyData[i].name}`);
     const cryptoSymbol = $('<span></span>').text(`${currencyData[i].symbol}`);
@@ -97,16 +69,12 @@ cryptoApp.renderCurrencyData = (currencyData,start) => {
     let price = currencyData[i].quote.USD.price;
     price = Math.round(price * 100) / 100;
     const cryptoPrice = $('<td>').text(`$${price}`);
-    // const cryptoPrice = $('<td>').text(`$${currencyData[i].quote.USD.price}`);
     let volumeChange = currencyData[i].quote.USD.volume_24h;
     volumeChange = Math.round(volumeChange * 100) / 100;
     const cryptoVolumeChange = $('<td>').text(`$${volumeChange}`);
-    // const cryptoVolumeChange = $('<td>').text(`$${currencyData[i].quote.USD.volume_24h}`);
     let percentChange = currencyData[i].quote.USD.percent_change_24h;
     percentChange = Math.round(percentChange * 100) / 100;
-    // console.log("percent change" + percentChange);
     const cryptoPriceChange = $('<td>').text(`${percentChange}%`);
-    // const cryptoPriceChange = $('<td>').text(`${currencyData[i].quote.USD.percent_change_24h}%`);
     if(currencyData[i].quote.USD.percent_change_24h <0){
       cryptoPriceChange.addClass('red');
     }else { 
@@ -117,7 +85,6 @@ cryptoApp.renderCurrencyData = (currencyData,start) => {
     const sellButton = $('<button>').text(`S`).addClass('sellBtn btn grow');
     tradeButton.append(buyButton,sellButton);
     const cryptoRowContainer = $('<tr>');
-    // TODO: re add cryptoPrice to this append
     cryptoRowContainer.append(cryptoName,cryptoPrice,cryptoVolumeChange,cryptoPriceChange,tradeButton);
     $('tbody').append(cryptoRowContainer);
   }
@@ -128,8 +95,6 @@ cryptoApp.tradeButton = ()=>{
   $('tbody').on('click','.buyBtn',function(){
     cryptoApp.currencyName  = $(this).parent().parent().children(':nth-child(1)').text();
     cryptoApp.currentPrice = $(this).parent().parent().children(':nth-child(2)').text();
-    // cryptoApp.currentBalance = $('.userBalanceInfo').children(':nth-child(2)').text();
-    console.log('balance'+  cryptoApp.currentBalance );
     $('.formHeaderTrade').css('background','#3385c6');
     $('.currencyInfoTrade').empty();
     $('.validationMsg').empty();
@@ -158,8 +123,6 @@ $('.tradeDetailForm').on('submit',(event)=>{
   event.preventDefault();
   const tradeQty = $('#userTradeActionQty').val();
   let currentTradePrice= parseInt((cryptoApp.currentPrice).substring(1));
-  console.log(currentTradePrice);
-  console.log(cryptoApp.currentBalance);
   if(tradeQty * currentTradePrice > cryptoApp.currentBalance){
     $('.validationMsg').empty();
     $('.validationMsg').append('<h3 class="red">insufficient account balance</h3>');
@@ -208,7 +171,6 @@ cryptoApp.userDetailFormSubmit = ()=>{
     $('.currencyHeader').append(currecylable,currecyQTYlable);
     const userCurrencyF = $('<h3>').text(userCurrency);
     const userCurrencyQtyF = $('<h3>').text(userCurrencyQty);
-    console.log(userCurrencyQty);
     if(userCurrencyQty > 0 )
       $('.currencyOwned').append(userCurrencyF,userCurrencyQtyF);
     $('.showUserDetail').show();
@@ -234,6 +196,5 @@ cryptoApp.init = ()=>{
 }
 //---------------------------document ready-------------------------//
 $(()=>{
-  // $.ajaxSetup({'cache':true});
   cryptoApp.init();
 });

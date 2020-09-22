@@ -20,20 +20,15 @@
       bottom:20%;
       right:10%;
     } 
-    // .userInfoContainer {
-    //   flex-direction: row;
-    //   // flex-basis: 100%;
-    // }
-    // .profileImgContainer{
-    //   flex-basis: 30%;
-    // }
-    // .table {
-    //   flex-basis: 100%;
-    // }
-    // .profileInfoContainer {
-    //   flex-basis: 70%;
-    // }
-  
+    .currencyOwned{
+      h3{
+        flex-basis: 90%;
+      }
+      h3:nth-child(even){
+        flex-basis: calc(10% - 2rem);
+        margin-left: 2rem;
+      }
+    }
 }
 
 /* Landscape phone to portrait tablet */
@@ -73,5 +68,14 @@
 
   .showUserDetail {
     padding: 1rem;
+  }
+  .currencyOwned{
+    h3{
+      flex-basis: 80%;
+    }
+    h3:nth-child(even){
+      flex-basis: calc(20% - 1rem);
+      margin-left: 1rem;
+    }
   }
 }
