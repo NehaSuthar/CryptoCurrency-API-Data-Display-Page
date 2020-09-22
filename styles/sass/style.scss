@@ -18,12 +18,7 @@ $button-color:#3385c6;
   display:flex;
   flex-direction: column;
 }
-.detailContainer{
-  display:flex;
-  margin:2rem auto;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
+
 @import "user-detail";
 @import "table-detail";
 @import "media-queries";

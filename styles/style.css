@@ -310,18 +310,6 @@ footer p {
           flex-direction: column;
 }
 
-.detailContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 2rem auto;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
 .userInfoContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -338,8 +326,7 @@ footer p {
 }
 
 .userInfoContainer .profileImgContainer {
-  -ms-flex-preferred-size: 20%;
-      flex-basis: 20%;
+  width: 50%;
 }
 
 .userInfoContainer .profileImgContainer img {
@@ -355,7 +342,8 @@ footer p {
 .profileInfoContainer .toggelUserForm {
   padding: 1rem;
   background: #3385c6;
-  margin: 5rem 1rem 0 2rem;
+  width: 80%;
+  margin: 5rem 0 2rem 2rem;
   /*
       position:relative;
       top:20%;
@@ -397,6 +385,18 @@ footer p {
   width: calc(50% - 2rem);
   padding: 1rem .5rem;
   margin-top: 1rem;
+}
+
+.detailContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2rem auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .userDetailSubmitBtn {
@@ -486,7 +486,6 @@ tr {
       flex-basis: 70%;
   padding-bottom: 5rem;
   overflow-x: auto;
-  position: relative;
 }
 
 .btn {
@@ -603,13 +602,11 @@ span {
 
 @media (max-width: 974px) {
   .detailContainer {
-    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  .profileImgContainer img {
-    width: 40%;
-    margin: 0 auto;
-  }
+  /* Landscape phone to portrait tablet */
+  /* Landscape phones and down */
 }
-
-/* Landscape phone to portrait tablet */
-/* Landscape phones and down */

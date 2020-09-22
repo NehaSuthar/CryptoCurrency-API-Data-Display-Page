@@ -1,16 +1,26 @@
 @media (max-width: 974px) {
 
     .detailContainer {
-      display: block;
+      flex-direction: column;
     }
-  
-    .profileImgContainer{
-      img{
-        width:40%;
-        margin: 0 auto;
-      }
+
+    .profileInfoContainer {
+      // margin-bottom: 300px;
     }
-  }
+    
+    // .userInfoContainer {
+    //   flex-direction: row;
+    //   // flex-basis: 100%;
+    // }
+    // .profileImgContainer{
+    //   flex-basis: 30%;
+    // }
+    // .table {
+    //   flex-basis: 100%;
+    // }
+    // .profileInfoContainer {
+    //   flex-basis: 70%;
+    // }
   
   /* Landscape phone to portrait tablet */
   @media (max-width: 768px) {
@@ -19,3 +29,4 @@
   /* Landscape phones and down */
   @media (max-width: 480px) {
   }
+}
