@@ -6,7 +6,6 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     .profileImgContainer{
       width: 50%;
-      // flex-basis: 20%;
       margin: 0 auto;
       img{
         width:100%;
@@ -16,17 +15,11 @@
   .profileInfoContainer{
     flex-basis: 75%;
     background:#ECF0F1;
-    // text-align: center;
     .toggelUserForm{
       padding:1rem;
       background:$button-color;
       width: 80%;
       margin: 5rem 0 2rem 2rem;
-
-      /*
-      position:relative;
-      top:20%;
-      left:15%;*/
     }
   }
   .detailForm{
@@ -58,6 +51,15 @@
       padding:1rem .5rem;
       margin-top:1rem;
     }     
+  }
+  .currencyOwned{
+    h3{
+      flex-basis: 70%;
+    }
+    h3:nth-child(even){
+      flex-basis: calc(30% - 2rem);
+      margin-left: 2rem;
+    }
   }
   .detailContainer{
     display:flex;
@@ -91,14 +93,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
   }
-  .currencyOwned{
-    h3{
-      // flex-basis: 50%;
-    }
-     h3:nth-child(even){
-    text-align: rigth;
-  }
-  }
+  
   .currencyHeader{
     border-bottom: .20rem solid black;
   }
